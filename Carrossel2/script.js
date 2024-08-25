@@ -23,3 +23,17 @@ var TrandingSlider = new Swiper('.tranding-slider', {
         disableOnInteraction: false, // O autoplay não será desativado após interação do usuário
       }
   });
+
+var autoplayButton = document.getElementById('autoplay-toggle');
+var autoplayActive = true;
+
+autoplayButton.addEventListener('click', function() {
+    if (autoplayActive) {
+        TrandingSlider.autoplay.stop();
+        autoplayButton.textContent = 'Ativar';
+    } else {
+        TrandingSlider.autoplay.start();
+        autoplayButton.textContent = 'Desativar';
+    }
+    autoplayActive = !autoplayActive;
+});
