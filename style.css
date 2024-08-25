@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -60,6 +61,8 @@ html {
 body {
   font-size: 1.6rem;
   background: var(--bg);
+  position: relative; /* Necessário para o posicionamento absoluto do botão */
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
 }
 
 .container {
@@ -76,10 +79,11 @@ body {
   font-size: 3rem;
   color: var(--primary);
   padding: 2rem 0;
+  position: relative; /* Necessário para o posicionamento do botão */
 }
 
 #tranding {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 @media (max-width:1440px) {
@@ -236,19 +240,20 @@ body {
 }
 
 .autoplay-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
+  background-color: #f09927;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Ajuste a distância do topo conforme necessário */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para o centro */
+  z-index: 10;
 }
 
 .autoplay-button:hover {
-    background-color: #0056b3;
+  background-color: #e6871e;
 }
