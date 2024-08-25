@@ -17,5 +17,9 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+    },
+    autoplay: {
+        delay: 3000, // Tempo em milissegundos entre transições (3 segundos)
+        disableOnInteraction: false, // O autoplay não será desativado após interação do usuário
+      }
   });
